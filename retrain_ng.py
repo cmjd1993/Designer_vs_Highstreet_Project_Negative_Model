@@ -119,8 +119,9 @@ RANDOM_SCALE = 0
 # a percentage determining how much to randomly multiply the training image input pixels up or down by
 RANDOM_BRIGHTNESS = 0
 
-os.system("mogrify -negate *.jpg training_images/designer/*.jpg")
-os.system("mogrify -negate *.jpg training_images/high_street/*.jpg")
+# converts images to negative
+os.system("mogrify -negate training_images/designer/*")
+os.system("mogrify -negate training_images/high_street/*")
 
 # Which model architecture to use. 'inception_v3' is the most accurate, but also the slowest. For faster or smaller models, chose a MobileNet with
 # the form 'mobilenet_<parameter size>_<input_size>[_quantized]'. For example, 'mobilenet_1.0_224' will pick a model that is 17 MB in size and takes
