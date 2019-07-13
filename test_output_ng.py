@@ -15,7 +15,7 @@ TEST_IMAGES_DIR = os.getcwd() + "/test_images"
 SCALAR_RED = (0.0, 0.0, 255.0)
 SCALAR_BLUE = (255.0, 0.0, 0.0)
 
-os.system("mogrify -negate *.jpg test_images/*.jpg")
+os.system("mogrify -negate *.jpg test_images/*")
 
 #######################################################################################################################
 def main():
